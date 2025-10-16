@@ -53,7 +53,7 @@ prog: $(BIT_SRAM)
 
 # 5) Program Flash (persistent across reboots)
 flash: $(BIT_SRAM)
-	$(PROG) $(PROG_FLAGS) -f $(BIT_SRAM)
+	$(PROG) $(PROG_FLAGS) -f $(BIT_SRAM) --unprotect-flash
 
 clean:
 	rm -rf $(BUILD)
